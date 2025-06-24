@@ -35,7 +35,6 @@ Only one valid answer exists.
 
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,13 +42,13 @@ public class TwoSum {
 
     public static void main(String[] args) {
         TwoSum app = new TwoSum();
-        System.out.println(Arrays.asList(
-                app.twoSum(new int[]{3,2,4}, 6)
+        System.out.println(Arrays.toString(
+                app.twoSum(new int[]{3,2,4}, 8)
         ));
     }
 
-    public Integer[] twoSum(int[] nums, int target) {
-        Integer[] result = new Integer[2];
+    public int[] twoSum(int[] nums, int target) {
+        int[] result = new int[2];
 
         Map<Integer, Integer> seen = new HashMap<>();
 
@@ -62,6 +61,6 @@ public class TwoSum {
             seen.put(target - nums[i], i);
         }
 
-        return null;
+        return new int[0];
     }
 }
